@@ -5,6 +5,7 @@ import './App.css';
 
 import AddToDo from "./AddTodo";
 import ListToDoV2 from './ListToDoV2.js';
+import headerFile from '../headerFile.js';
 
 // Setup a couple vars for the API. Not the best way but works for this example
 const todoListEndpoint = "http://localhost:3001/api/todos/";
@@ -93,12 +94,9 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <header className="App-header">
-                    <img src={logo} className="App-logo" alt="logo"/>
-                    <h1 className="App-title">{this.state.appTitle}</h1>
-                </header>
-                <div>
+                    <headerFile/>
                     <AddToDo clicked={this.clickAdd}/>
+                <div>
                 </div>
                 <div>
                     {/*Lets use properties to handle requests from other components*/}
